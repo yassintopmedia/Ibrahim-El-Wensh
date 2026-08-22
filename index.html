@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>مكتب ومصنع إبراهيم الونش للعبايات والملابس البيتي</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+
+            /* خلفية بألوان هادئة مستوحاة من الصورة */
+            background:
+                radial-gradient(circle at 20% 20%, #8b6570 0%, transparent 35%),
+                radial-gradient(circle at 80% 80%, #57434d 0%, transparent 40%),
+                linear-gradient(135deg, #241e23, #493840, #6d525d);
+        }
+
+        /* طبقة الخلفية */
+        .bg {
+            position: fixed;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(45, 32, 40, .72),
+                    rgba(45, 32, 40, .72)
+                ),
+                url('https://files.catbox.moe/02ogry.jpg');
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            opacity: .75;
+            z-index: -2;
+
+            animation: moveBg 18s ease-in-out infinite alternate;
+        }
+
+        @keyframes moveBg {
+
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.08);
+            }
+
+        }
+
+        /* الكارت */
+        .card {
+
+            width: min(92%, 420px);
+
+            margin: 30px auto;
+
+            background: rgba(55, 39, 48, .82);
+
+            backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(226, 181, 194, .55);
+
+            border-radius: 26px;
+
+            padding: 22px;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.35),
+                inset 0 0 30px rgba(255,255,255,.03);
+
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* الصورة */
+        .logo {
+
+            width: 145px;
+            height: 145px;
+
+            border-radius: 50%;
+
+            display: block;
+
+            margin: auto;
+
+            border: 4px solid #d7aebc;
+
+            object-fit: cover;
+
+            box-shadow:
+                0 0 25px rgba(215,174,188,.35);
+
+            transition: .5s;
+        }
+
+        .logo:hover {
+
+            transform: scale(1.05) rotate(5deg);
+
+            border-color: #fff;
+
+        }
+
+        /* الاسم */
+        h1 {
+
+            text-align: center;
+
+            color: #f0cbd6;
+
+            margin: 16px 0;
+
+            font-size: 21px;
+
+            line-height: 1.6;
+
+            text-shadow:
+                0 0 15px rgba(240,203,214,.35);
+        }
+
+        /* السعر */
+        .price {
+
+            text-align: center;
+
+            color: #ffd6e1;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            margin: 12px 0 20px;
+
+            padding: 10px;
+
+            background: rgba(255,255,255,.06);
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(240,203,214,.2);
+        }
+
+        /* السوشيال */
+        .social-icons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 28px;
+
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+
+            color: #e7b8c7;
+
+            font-size: 28px;
+
+            transition: .3s;
+
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+        .social-icons a:hover {
+
+            color: #fff;
+
+            transform: scale(1.3);
+
+        }
+
+        /* زر تعرف عننا */
+        .accordion {
+
+            width: 100%;
+
+            background: rgba(255,255,255,.06);
+
+            color: #f0cbd6;
+
+            padding: 14px;
+
+            border: 1px solid rgba(240,203,214,.45);
+
+            border-radius: 14px;
+
+            margin: 10px 0;
+
+            cursor: pointer;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+            transition: .3s;
+        }
+
+        .accordion:hover {
+
+            background: #d49aaa;
+
+            color: #281f24;
+
+        }
+
+        /* الوصف */
+        .panel {
+
+            display: none;
+
+            background: rgba(30,22,27,.55);
+
+            padding: 16px;
+
+            border-radius: 14px;
+
+            margin-bottom: 12px;
+
+            font-size: 14px;
+
+            line-height: 2;
+
+            text-align: right;
+
+            border-right: 3px solid #d7aebc;
+        }
+
+        /* عنوان الأقسام */
+        .section-title {
+
+            color: #f0cbd6;
+
+            text-align: center;
+
+            margin: 22px 0 10px;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+        }
+
+        /* الأزرار */
+        .btn {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            text-decoration: none;
+
+            color: #fff;
+
+            background: rgba(255,255,255,.055);
+
+            padding: 14px;
+
+            border-radius: 14px;
+
+            margin: 8px 0;
+
+            transition: .35s;
+
+            border: 1px solid rgba(255,255,255,.12);
+
+        }
+
+        .btn:hover {
+
+            background: #d49aaa;
+
+            color: #281f24;
+
+            padding-right: 20px;
+
+            box-shadow:
+                0 0 20px rgba(212,154,170,.25);
+        }
+
+        /* تيليجرام */
+        .telegram {
+
+            border-color: rgba(94,181,229,.5);
+
+        }
+
+        /* الهاتف */
+        .phone {
+
+            border-color: rgba(37,211,102,.35);
+
+        }
+
+        /* اللوكيشن */
+        .location {
+
+            border-color: rgba(231,76,60,.45);
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- الخلفية -->
+    <div class="bg"></div>
+
+    <div class="card">
+
+        <!-- الصورة -->
+        <img
+            class="logo"
+            src="https://files.catbox.moe/02ogry.jpg"
+            alt="مكتب ومصنع إبراهيم الونش">
+
+        <!-- الاسم -->
+        <h1>
+            مكتب ومصنع إبراهيم الونش للعبايات والملابس البيتي 🖤
+        </h1>
+
+        <!-- السعر -->
+        <div class="price">
+            💰 الأسعار تبدأ من 45 جنيه فقط!
+        </div>
+
+        <!-- السوشيال -->
+        <div class="social-icons">
+
+            <a
+                href="https://www.facebook.com/profile.php?id=61551195445765&mibextid=LQQJ4d"
+                target="_blank">
+
+                <i class="fab fa-facebook"></i>
+
+            </a>
+
+            <a
+                href="https://instagram.com/ibrahimelwensh320?igshid=MzRlODBiNWFlZA=="
+                target="_blank">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@ibrahimelwensh320?_t=8fdTRbeK5h7&_r=1"
+                target="_blank">
+
+                <i class="fab fa-tiktok"></i>
+
+            </a>
+
+        </div>
+
+        <!-- تعرف عننا -->
+        <button
+            class="accordion"
+            onclick="toggle('about')">
+
+            تعرف عننا ⬇️
+
+        </button>
+
+        <div id="about" class="panel">
+
+            مصنع ومكتب متخصص في الملابس الجاهزة،
+            وبنوفرلك تشكيلة متنوعة من العبايات والملابس البيتي
+            بجودة مناسبة وأسعار جملة مميزة. ✨
+
+            <br>
+
+            💰 الأسعار تبدأ من 45 جنيه فقط!
+
+            <br>
+
+            📦 موديلات متنوعة تناسب التجار وأصحاب المحلات والموزعين.
+
+            <br>
+
+            🔥 أسعار مناسبة للجملة تساعدك تحقق هامش ربح أفضل.
+
+            <br>
+
+            👗 تشكيلات متجددة وموديلات متنوعة باستمرار.
+
+            <br>
+
+            🚚 متاح الشحن والتوريد للمحافظات.
+
+        </div>
+
+        <!-- تيليجرام -->
+        <div class="section-title">
+            📱 قنواتنا على تيليجرام
+        </div>
+
+        <a
+            class="btn telegram"
+            href="https://t.me/amralwens"
+            target="_blank">
+
+            <span>📱 تيليجرام - بيتي</span>
+
+            <i class="fab fa-telegram"></i>
+
+        </a>
+
+        <a
+            class="btn telegram"
+            href="https://t.me/alwens2lingriy"
+            target="_blank">
+
+            <span>📱 تيليجرام - لانجيري</span>
+
+            <i class="fab fa-telegram"></i>
+
+        </a>
+
+        <!-- الحجز -->
+        <div class="section-title">
+            📞 الحجز والتواصل
+        </div>
+
+        <a
+            class="btn phone"
+            href="tel:01033643406">
+
+            <span>01033643406</span>
+
+            <i class="fas fa-phone"></i>
+
+        </a>
+
+        <a
+            class="btn phone"
+            href="tel:01101418393">
+
+            <span>01101418393</span>
+
+            <i class="fas fa-phone"></i>
+
+        </a>
+
+        <a
+            class="btn phone"
+            href="tel:01009250948">
+
+            <span>01009250948 - باقي المحافظات</span>
+
+            <i class="fas fa-phone"></i>
+
+        </a>
+
+        <!-- اللوكيشن -->
+        <a
+            class="btn location"
+            href="https://goo.gl/maps/G4LYbszYj6nj4gY37"
+            target="_blank">
+
+            <span>📍 لوكيشن المكتب</span>
+
+            <i class="fas fa-location-dot"></i>
+
+        </a>
+
+    </div>
+
+    <script>
+
+        function toggle(id) {
+
+            var x = document.getElementById(id);
+
+            if (x.style.display === "block") {
+
+                x.style.display = "none";
+
+            } else {
+
+                x.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
