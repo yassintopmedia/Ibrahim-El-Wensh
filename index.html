@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>مكتب ومصنع إبراهيم الونش للعبايات والملابس البيتي</title>
+    <title>مصنع ومكتب إبراهيم الونش للانجري والبيتي</title>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -28,7 +28,6 @@
                 linear-gradient(135deg, #241e23, #493840, #6d525d);
         }
 
-        /* الخلفية */
         .bg {
             position: fixed;
             inset: 0;
@@ -60,7 +59,6 @@
             }
         }
 
-        /* الكارت الرئيسي */
         .card {
             width: min(92%, 420px);
             margin: 30px auto;
@@ -94,7 +92,6 @@
             }
         }
 
-        /* الصورة */
         .logo {
             width: 145px;
             height: 145px;
@@ -119,7 +116,6 @@
             border-color: #fff;
         }
 
-        /* الاسم */
         h1 {
             text-align: center;
 
@@ -135,7 +131,6 @@
                 0 0 15px rgba(240,203,214,.35);
         }
 
-        /* السعر */
         .price {
             text-align: center;
 
@@ -156,7 +151,6 @@
             border: 1px solid rgba(240,203,214,.2);
         }
 
-        /* السوشيال */
         .social-icons {
             display: flex;
             justify-content: center;
@@ -195,7 +189,6 @@
             transform: scale(1.3);
         }
 
-        /* زر تعرف عننا */
         .accordion {
             width: 100%;
 
@@ -227,7 +220,6 @@
             color: #281f24;
         }
 
-        /* الوصف */
         .panel {
             display: none;
 
@@ -248,7 +240,6 @@
             border-right: 3px solid #d7aebc;
         }
 
-        /* عناوين الأقسام */
         .section-title {
             color: #f0cbd6;
 
@@ -261,7 +252,6 @@
             font-size: 16px;
         }
 
-        /* الأزرار */
         .btn {
             display: flex;
 
@@ -299,37 +289,51 @@
                 0 0 20px rgba(212,154,170,.25);
         }
 
-        /* تيليجرام */
         .telegram {
             border-color: rgba(94,181,229,.5);
         }
 
-        /* واتساب */
         .whatsapp {
             border-color: rgba(37,211,102,.45);
         }
 
-        /* لوكيشن */
         .location {
             border-color: rgba(231,76,60,.45);
         }
 
-        /* أيقونة واتساب */
         .whatsapp i {
             color: #25D366;
             font-size: 21px;
         }
 
-        /* أيقونة تيليجرام */
         .telegram i {
             color: #229ED9;
             font-size: 21px;
         }
 
-        /* أيقونة اللوكيشن */
         .location i {
             color: #ff6b5f;
             font-size: 20px;
+        }
+
+        /* حقوق الموقع */
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 18px;
+
+            border-top: 1px solid rgba(240,203,214,.2);
+
+            color: #d9b8c3;
+
+            font-size: 13px;
+
+            letter-spacing: .5px;
+        }
+
+        .footer strong {
+            color: #f0cbd6;
+            font-size: 15px;
         }
 
     </style>
@@ -337,31 +341,26 @@
 
 <body>
 
-    <!-- الخلفية -->
     <div class="bg"></div>
 
     <div class="card">
 
-        <!-- الصورة -->
         <img
             class="logo"
             src="https://files.catbox.moe/02ogry.jpg"
-            alt="مكتب ومصنع إبراهيم الونش">
+            alt="مصنع ومكتب إبراهيم الونش">
 
-        <!-- الاسم -->
         <h1>
-            مكتب ومصنع إبراهيم الونش للعبايات والملابس البيتي 🖤
+            مصنع ومكتب إبراهيم الونش<br>
+            للانجري والبيتي
         </h1>
 
-        <!-- السعر -->
         <div class="price">
-            💰 الأسعار تبدأ من 45 جنيه فقط!
+            الأسعار تبدأ من 45 جنيه فقط
         </div>
 
-        <!-- السوشيال ميديا -->
         <div class="social-icons">
 
-            <!-- فيسبوك -->
             <a
                 href="https://www.facebook.com/profile.php?id=61551195445765&mibextid=LQQJ4d"
                 target="_blank"
@@ -371,7 +370,6 @@
 
             </a>
 
-            <!-- إنستجرام -->
             <a
                 href="https://instagram.com/ibrahimelwensh320?igshid=MzRlODBiNWFlZA=="
                 target="_blank"
@@ -381,7 +379,6 @@
 
             </a>
 
-            <!-- تيك توك -->
             <a
                 href="https://www.tiktok.com/@ibrahimelwensh320?_t=8fdTRbeK5h7&_r=1"
                 target="_blank"
@@ -393,12 +390,11 @@
 
         </div>
 
-        <!-- تعرف عننا -->
         <button
             class="accordion"
             onclick="toggle('about')">
 
-            تعرف عننا ⬇️
+            تعرف عننا
 
         </button>
 
@@ -406,33 +402,32 @@
 
             مصنع ومكتب متخصص في الملابس الجاهزة،
             وبنوفرلك تشكيلة متنوعة من العبايات والملابس البيتي
-            بجودة مناسبة وأسعار جملة مميزة. ✨
+            بجودة مناسبة وأسعار جملة مميزة.
 
             <br>
 
-            💰 الأسعار تبدأ من 45 جنيه فقط!
+            الأسعار تبدأ من 45 جنيه فقط.
 
             <br>
 
-            📦 موديلات متنوعة تناسب التجار وأصحاب المحلات والموزعين.
+            موديلات متنوعة تناسب التجار وأصحاب المحلات والموزعين.
 
             <br>
 
-            🔥 أسعار مناسبة للجملة تساعدك تحقق هامش ربح أفضل.
+            أسعار مناسبة للجملة تساعدك تحقق هامش ربح أفضل.
 
             <br>
 
-            👗 تشكيلات متجددة وموديلات متنوعة باستمرار.
+            تشكيلات متجددة وموديلات متنوعة باستمرار.
 
             <br>
 
-            🚚 متاح الشحن والتوريد للمحافظات.
+            متاح الشحن والتوريد للمحافظات.
 
         </div>
 
-        <!-- قنوات تيليجرام -->
         <div class="section-title">
-            📱 قنواتنا على تيليجرام
+            قنواتنا على تيليجرام
         </div>
 
         <a
@@ -440,7 +435,7 @@
             href="https://t.me/amralwens"
             target="_blank">
 
-            <span>📱 تيليجرام - بيتي</span>
+            <span>تيليجرام - بيتي</span>
 
             <i class="fab fa-telegram"></i>
 
@@ -451,64 +446,65 @@
             href="https://t.me/alwens2lingriy"
             target="_blank">
 
-            <span>📱 تيليجرام - لانجيري</span>
+            <span>تيليجرام - لانجيري</span>
 
             <i class="fab fa-telegram"></i>
 
         </a>
 
-        <!-- الحجز -->
         <div class="section-title">
-            📞 الحجز والتواصل عبر واتساب
+            الحجز والتواصل عبر واتساب
         </div>
 
-        <!-- واتساب القاهرة والجيزة -->
         <a
             class="btn whatsapp"
             href="https://wa.me/201033643406"
             target="_blank">
 
-            <span>💬 واتساب - القاهرة والجيزة</span>
+            <span>واتساب - القاهرة والجيزة</span>
 
             <i class="fab fa-whatsapp"></i>
 
         </a>
 
-        <!-- واتساب القاهرة والجيزة -->
         <a
             class="btn whatsapp"
             href="https://wa.me/201101418393"
             target="_blank">
 
-            <span>💬 واتساب - القاهرة والجيزة</span>
+            <span>واتساب - القاهرة والجيزة</span>
 
             <i class="fab fa-whatsapp"></i>
 
         </a>
 
-        <!-- واتساب باقي المحافظات -->
         <a
             class="btn whatsapp"
             href="https://wa.me/201009250948"
             target="_blank">
 
-            <span>💬 واتساب - باقي المحافظات</span>
+            <span>واتساب - باقي المحافظات</span>
 
             <i class="fab fa-whatsapp"></i>
 
         </a>
 
-        <!-- اللوكيشن -->
         <a
             class="btn location"
             href="https://goo.gl/maps/G4LYbszYj6nj4gY37"
             target="_blank">
 
-            <span>📍 لوكيشن المكتب</span>
+            <span>لوكيشن المكتب</span>
 
             <i class="fas fa-location-dot"></i>
 
         </a>
+
+        <div class="footer">
+            <strong>Top Media</strong>
+            <br>
+            للدعاية والإعلان
+        </div>
 
     </div>
 
